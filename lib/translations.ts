@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       home: 'Accueil',
       services: 'Services',
+      partners: 'Partenaires',
       solutions: 'Solutions',
       portfolio: 'Portfolio',
       blog: 'Blog',
@@ -21,7 +22,7 @@ export const translations = {
       stat2: 'Conformité',
     },
     services: {
-      tag: 'Nos Services',
+      tag: '',
       title: 'Des solutions technologiques de bout en bout',
       subtitle:
         'Une expertise complète pour protéger, connecter et transformer votre entreprise.',
@@ -66,6 +67,12 @@ export const translations = {
         { value: 4, suffix: '+', label: 'Années d\'expérience' },
       ],
     },
+    partners: {
+      tag: 'Partenaires',
+      title: 'Nos partenaires',
+      subtitle:
+        'Un réseau de partenaires technologiques et institutionnels qui renforce notre capacité à livrer des solutions fiables.',
+    },
     why: {
       tag: 'Pourquoi nous choisir',
       title: 'L\'excellence au service de votre sécurité',
@@ -85,12 +92,102 @@ export const translations = {
       subtitle: 'Une sélection de projets livrés pour nos clients.',
       filters: { all: 'Tous les projets', security: 'Sécurité', network: 'Réseaux', dev: 'Développement', training: 'Formation' },
       items: [
-        { title: 'Vidéosurveillance bancaire', cat: 'security', tag: 'Sécurité' },
-        { title: 'Datacenter & réseau hôtelier', cat: 'network', tag: 'Réseaux' },
-        { title: 'Plateforme métier hospitalière', cat: 'dev', tag: 'Développement' },
-        { title: 'Contrôle d\'accès gouvernemental', cat: 'security', tag: 'Sécurité' },
-        { title: 'Programme de formation cyber', cat: 'training', tag: 'Formation' },
-        { title: 'Application mobile entreprise', cat: 'dev', tag: 'Développement' },
+        {
+          title: 'Vidéosurveillance bancaire',
+          cat: 'security',
+          tag: 'Sécurité',
+          desc: "Déploiement d'un système de surveillance IP haute définition avec stockage redondant et analyse vidéo intelligente pour une grande banque commerciale."
+        },
+        {
+          title: 'Datacenter & réseau hôtelier',
+          cat: 'network',
+          tag: 'Réseaux',
+          desc: "Conception et implémentation de l'infrastructure réseau (Wi-Fi 6, commutation, routage) et d'une salle serveur sécurisée pour un hôtel 5 étoiles."
+        },
+        {
+          title: 'Plateforme métier hospitalière',
+          cat: 'dev',
+          tag: 'Développement',
+          desc: "Logiciel de gestion des dossiers patients, de facturation et de planification des soins conçu sur mesure pour une clinique de référence."
+        },
+        {
+          title: 'Contrôle d\'accès gouvernemental',
+          cat: 'security',
+          tag: 'Sécurité',
+          desc: "Sécurisation des accès d'un bâtiment administratif via des systèmes biométriques de dernière génération et des portiques de sécurité connectés."
+        },
+        {
+          title: 'Programme de formation cyber',
+          cat: 'training',
+          tag: 'Formation',
+          desc: "Formation intensive sur les principes de sécurité de l'information et sensibilisation au phishing pour plus de 300 employés de bureau."
+        },
+        {
+          title: 'Application mobile entreprise',
+          cat: 'dev',
+          tag: 'Développement',
+          desc: "Application mobile Android/iOS connectée au système ERP pour la gestion de la flotte de livraison et le suivi logistique en temps réel."
+        },
+        {
+          title: 'Système Anti-intrusion Industriel',
+          cat: 'security',
+          tag: 'Sécurité',
+          desc: "Installation de barrières infrarouges, de capteurs sismiques et d'une alarme centralisée reliée à un centre de télésurveillance pour un site minier."
+        },
+        {
+          title: 'Détection Incendie Connectée',
+          cat: 'security',
+          tag: 'Sécurité',
+          desc: "Système de détection de fumée et de chaleur adressable de dernière génération conforme aux normes NFPA pour un grand entrepôt logistique."
+        },
+        {
+          title: 'Interconnexion Multi-sites SD-WAN',
+          cat: 'network',
+          tag: 'Réseaux',
+          desc: "Liaison sécurisée par tunnel SD-WAN hautement disponible reliant le siège social et 12 succursales à travers la République Démocratique du Congo."
+        },
+        {
+          title: 'Réseau Sans-Fil Outdoor Métropolitain',
+          cat: 'network',
+          tag: 'Réseaux',
+          desc: "Déploiement d'une boucle locale sans-fil à haut débit et de ponts radio point-à-point pour interconnecter des sites distants d'une entreprise publique."
+        },
+        {
+          title: 'Audit & Optimisation Réseau',
+          cat: 'network',
+          tag: 'Réseaux',
+          desc: "Analyse de performance, refonte du plan d'adressage IP, mise en place de la QoS et renforcement des politiques de sécurité pour un opérateur de services."
+        },
+        {
+          title: 'Portail Client & Facturation Cloud',
+          cat: 'dev',
+          tag: 'Développement',
+          desc: "Application web hautement sécurisée permettant aux abonnés de consulter leurs factures, d'effectuer des paiements en ligne et d'ouvrir des tickets de support."
+        },
+        {
+          title: 'Système de Gestion de Stocks (WMS)',
+          cat: 'dev',
+          tag: 'Développement',
+          desc: "Solution web d'automatisation des entrées/sorties de marchandises, avec suivi par code-barres et alertes intelligentes de réapprovisionnement."
+        },
+        {
+          title: 'Certification Cisco CCNA & CCNP',
+          cat: 'training',
+          tag: 'Formation',
+          desc: "Atelier pratique intensif préparant les ingénieurs réseaux d'un partenaire télécom aux examens officiels d'administration réseau."
+        },
+        {
+          title: 'Formation SecOps & DevOps',
+          cat: 'training',
+          tag: 'Formation',
+          desc: "Programme d'accompagnement sur le déploiement continu sécurisé, l'intégration des tests de sécurité (SAST/DAST) et Docker/Kubernetes."
+        },
+        {
+          title: 'Gouvernance ITIL & Cybersécurité',
+          cat: 'training',
+          tag: 'Formation',
+          desc: "Session stratégique pour les décideurs et directeurs informatiques sur les cadres réglementaires, la gestion des risques et la norme ISO 27001."
+        }
       ],
     },
     industries: {
@@ -185,6 +282,7 @@ export const translations = {
     nav: {
       home: 'Home',
       services: 'Services',
+      partners: 'Partners',
       solutions: 'Solutions',
       portfolio: 'Portfolio',
       blog: 'Blog',
@@ -194,7 +292,7 @@ export const translations = {
     },
     hero: {
       badge: 'Next-Generation Security & Technology',
-      headline: 'REIMAGINING THE FUTURE',
+      headline: 'KOINONOS',
       sub: 'Your partner in Information Technology and Electronic Security',
       ctaPrimary: 'Request a quote',
       ctaSecondary: 'Discover our services',
@@ -246,6 +344,12 @@ export const translations = {
         { value: 4, suffix: '+', label: 'Years of experience' },
       ],
     },
+    partners: {
+      tag: 'Partners',
+      title: 'They move forward with KOINONOS',
+      subtitle:
+        'A network of technology and institutional partners that strengthens our ability to deliver reliable solutions.',
+    },
     why: {
       tag: 'Why choose us',
       title: 'Excellence at the service of your security',
@@ -265,12 +369,102 @@ export const translations = {
       subtitle: 'A selection of projects delivered for our clients.',
       filters: { all: 'All projects', security: 'Security', network: 'Networking', dev: 'Development', training: 'Training' },
       items: [
-        { title: 'Banking video surveillance', cat: 'security', tag: 'Security' },
-        { title: 'Hotel datacenter & network', cat: 'network', tag: 'Networking' },
-        { title: 'Hospital business platform', cat: 'dev', tag: 'Development' },
-        { title: 'Government access control', cat: 'security', tag: 'Security' },
-        { title: 'Cybersecurity training program', cat: 'training', tag: 'Training' },
-        { title: 'Enterprise mobile application', cat: 'dev', tag: 'Development' },
+        {
+          title: 'Banking video surveillance',
+          cat: 'security',
+          tag: 'Security',
+          desc: 'Deployment of a high-definition IP surveillance system with redundant storage and intelligent video analysis for a major commercial bank.'
+        },
+        {
+          title: 'Hotel datacenter & network',
+          cat: 'network',
+          tag: 'Networking',
+          desc: 'Design and implementation of network infrastructure (Wi-Fi 6, switching, routing) and a secure server room for a 5-star hotel.'
+        },
+        {
+          title: 'Hospital business platform',
+          cat: 'dev',
+          tag: 'Development',
+          desc: 'Custom-designed patient file management, billing, and care scheduling software for a reference clinic.'
+        },
+        {
+          title: 'Government access control',
+          cat: 'security',
+          tag: 'Security',
+          desc: 'Securing access to an administrative building via state-of-the-art biometric systems and connected security gates.'
+        },
+        {
+          title: 'Cybersecurity training program',
+          cat: 'training',
+          tag: 'Training',
+          desc: 'Intensive training on information security principles and phishing awareness for over 300 office employees.'
+        },
+        {
+          title: 'Enterprise mobile application',
+          cat: 'dev',
+          tag: 'Development',
+          desc: 'Android/iOS mobile application connected to the ERP system for delivery fleet management and real-time logistics tracking.'
+        },
+        {
+          title: 'Industrial Anti-intrusion System',
+          cat: 'security',
+          tag: 'Security',
+          desc: 'Installation of infrared barriers, seismic sensors, and a centralized alarm connected to a remote monitoring center for a mining site.'
+        },
+        {
+          title: 'Connected Fire Detection',
+          cat: 'security',
+          tag: 'Security',
+          desc: 'Latest generation addressable smoke and heat detection system complying with NFPA standards for a large logistics warehouse.'
+        },
+        {
+          title: 'Multi-site SD-WAN Interconnection',
+          cat: 'network',
+          tag: 'Networking',
+          desc: 'Secure connection via highly available SD-WAN tunnel linking the headquarters and 12 branches across the Democratic Republic of Congo.'
+        },
+        {
+          title: 'Metropolitan Outdoor Wireless Network',
+          cat: 'network',
+          tag: 'Networking',
+          desc: 'Deployment of a high-speed wireless local loop and point-to-point radio bridges to interconnect remote sites of a public company.'
+        },
+        {
+          title: 'Network Audit & Optimization',
+          cat: 'network',
+          tag: 'Networking',
+          desc: 'Performance analysis, redesign of the IP addressing plan, implementation of QoS and reinforcement of security policies for a service provider.'
+        },
+        {
+          title: 'Client Portal & Cloud Billing',
+          cat: 'dev',
+          tag: 'Development',
+          desc: 'Highly secure web application allowing subscribers to view invoices, make online payments, and open support tickets.'
+        },
+        {
+          title: 'Warehouse Management System (WMS)',
+          cat: 'dev',
+          tag: 'Development',
+          desc: 'Web solution for automating goods receipt/issue, with barcode tracking and intelligent replenishment alerts.'
+        },
+        {
+          title: 'Cisco CCNA & CCNP Certification',
+          cat: 'training',
+          tag: 'Training',
+          desc: 'Intensive hands-on workshop preparing network engineers from a telecom partner for official network administration exams.'
+        },
+        {
+          title: 'SecOps & DevOps Training',
+          cat: 'training',
+          tag: 'Training',
+          desc: 'Mentoring program on secure continuous deployment, security test integration (SAST/DAST) and Docker/Kubernetes.'
+        },
+        {
+          title: 'ITIL Governance & Cybersecurity',
+          cat: 'training',
+          tag: 'Training',
+          desc: 'Strategic session for IT decision-makers and directors on regulatory frameworks, risk management and the ISO 27001 standard.'
+        }
       ],
     },
     industries: {

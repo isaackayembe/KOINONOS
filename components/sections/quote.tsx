@@ -91,7 +91,7 @@ export function Quote() {
                   <Textarea id="description" name="description" rows={4} />
                 </div>
 
-                <Button type="submit" size="lg" className="group glow-blue">
+                <Button type="submit" size="lg" className="group glow-primary">
                   {t.quote.submit}
                   <Send className="size-4 transition-transform group-hover:translate-x-0.5" />
                 </Button>

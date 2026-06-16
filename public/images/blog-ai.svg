@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600">
   <defs><linearGradient id="b" x2="1" y2="1"><stop stop-color="#0c1024"/><stop offset="1" stop-color="#183b3b"/></linearGradient></defs>
   <rect width="960" height="600" fill="url(#b)"/>
-  <g stroke="#4f8cff" stroke-width="5" opacity=".55"><path d="M170 180l190 75M790 180l-190 75M170 420l190-75M790 420l-190-75"/><path d="M480 70v110M480 420v110"/></g>
-  <g fill="#36d6a0"><circle cx="170" cy="180" r="22"/><circle cx="790" cy="180" r="22"/><circle cx="170" cy="420" r="22"/><circle cx="790" cy="420" r="22"/><circle cx="480" cy="70" r="22"/><circle cx="480" cy="530" r="22"/></g>
-  <path d="M480 160c-115 0-205 65-205 150 0 55 38 104 98 130v70l70-50h37c115 0 205-65 205-150s-90-150-205-150z" fill="#101a30" stroke="#83acff" stroke-width="8"/>
+  <g stroke="#e30613" stroke-width="5" opacity=".55"><path d="M170 180l190 75M790 180l-190 75M170 420l190-75M790 420l-190-75"/><path d="M480 70v110M480 420v110"/></g>
+  <g fill="#c8c8c8"><circle cx="170" cy="180" r="22"/><circle cx="790" cy="180" r="22"/><circle cx="170" cy="420" r="22"/><circle cx="790" cy="420" r="22"/><circle cx="480" cy="70" r="22"/><circle cx="480" cy="530" r="22"/></g>
+  <path d="M480 160c-115 0-205 65-205 150 0 55 38 104 98 130v70l70-50h37c115 0 205-65 205-150s-90-150-205-150z" fill="#101a30" stroke="#f2f2f2" stroke-width="8"/>
   <text x="480" y="337" fill="#f4f7fb" font-family="Arial, sans-serif" font-size="100" font-weight="700" text-anchor="middle">AI</text>
 </svg>

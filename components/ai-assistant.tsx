@@ -156,7 +156,7 @@ export function AiAssistant() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open AI assistant"
-        className="fixed bottom-6 right-4 z-[60] flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 glow-blue sm:right-6"
+        className="fixed bottom-6 right-4 z-[60] flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 glow-primary sm:right-6"
       >
         <AnimatePresence mode="wait">
           {open ? (

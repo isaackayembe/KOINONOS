@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { LanguageProvider } from "@/components/language-provider";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className="h-full antialiased"
+      className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         <LanguageProvider>{children}</LanguageProvider>

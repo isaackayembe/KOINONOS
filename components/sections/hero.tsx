@@ -1,12 +1,24 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/components/language-provider'
 
+const welcomeLines = ['Bienvenue sur KOINONOS', 'Welcome to KOINONOS']
+
 export function Hero() {
   const { t } = useLanguage()
+  const [welcomeIndex, setWelcomeIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setWelcomeIndex((index) => (index + 1) % welcomeLines.length)
+    }, 2800)
+
+    return () => window.clearInterval(interval)
+  }, [])
 
   return (
     <section
@@ -32,7 +44,23 @@ export function Hero() {
       <div className="absolute right-1/4 top-1/2 -z-10 size-[360px] rounded-full bg-accent/20 blur-[120px]" />
 
       <div className="mx-auto max-w-4xl px-4 text-center">
-        
+        <div
+          className="mb-5 flex min-h-9 items-center justify-center overflow-hidden"
+          aria-live="polite"
+        >
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={welcomeLines[welcomeIndex]}
+              initial={{ opacity: 0, y: 16, filter: 'blur(6px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              exit={{ opacity: 0, y: -16, filter: 'blur(6px)' }}
+              transition={{ duration: 0.45, ease: 'easeOut' }}
+              className="rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold uppercase text-primary shadow-lg shadow-primary/10 sm:text-base"
+            >
+              {welcomeLines[welcomeIndex]}
+            </motion.p>
+          </AnimatePresence>
+        </div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +89,7 @@ export function Hero() {
           <Button
             render={<a href="#quote" />}
             size="lg"
-            className="group glow-blue h-12 px-7 text-base"
+            className="group glow-primary h-12 px-7 text-base"
           >
             {t.hero.ctaPrimary}
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

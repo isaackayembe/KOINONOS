@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import {
   Cctv,
@@ -38,6 +39,7 @@ export function Services() {
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((service, i) => {
             const Icon = icons[i]
+
             return (
               <motion.article
                 key={service.title}
@@ -46,29 +48,49 @@ export function Services() {
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: (i % 3) * 0.08 }}
                 whileHover={{ y: -6 }}
-                className="group relative overflow-hidden rounded-2xl border border-border glass p-6 transition-colors hover:border-primary/40"
+                className="group relative overflow-hidden rounded-2xl border border-border glass p-0 transition-all duration-300 hover:border-primary/40 hover:shadow-xl hover:shadow-black/20"
               >
-                <div className="absolute -right-10 -top-10 size-32 rounded-full bg-primary/10 blur-2xl transition-opacity group-hover:opacity-100 opacity-0" />
-                <div className="relative flex size-12 items-center justify-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/20 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                  <Icon className="size-6" />
+                {/* Blurred Cisco image cover area */}
+                <div
+                  className="relative h-32 w-full overflow-hidden border-b border-border flex items-center justify-center bg-black"
+                >
+                  <Image
+                    src="/images/cisco.png"
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover blur-[2px] scale-110 opacity-70 transition-transform duration-500 group-hover:scale-115"
+                  />
+                  <div className="absolute inset-0 bg-black/40" />
+
+                  {/* Icon wrapper with glowing external shadow */}
+                  <div
+                    className="relative flex size-14 items-center justify-center rounded-2xl border border-white/10 bg-black/60 text-white shadow-[0_0_15px_rgba(255,255,255,0.12)] transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40 group-hover:text-primary group-hover:shadow-[0_0_20px_rgba(227,6,19,0.5)]"
+                  >
+                    <Icon className="size-7" />
+                  </div>
                 </div>
-                <h3 className="relative mt-5 text-lg font-semibold">
-                  {service.title}
-                </h3>
-                <p className="relative mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                  {service.desc}
-                </p>
-                <ul className="relative mt-4 flex flex-col gap-2">
-                  {service.features.map((f) => (
-                    <li
-                      key={f}
-                      className="flex items-center gap-2 text-sm text-muted-foreground"
-                    >
-                      <Check className="size-4 shrink-0 text-accent" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
+
+                {/* Card Content Area */}
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground min-h-[4.5rem]">
+                    {service.desc}
+                  </p>
+                  <ul className="mt-5 flex flex-col gap-2.5 border-t border-border/40 pt-4">
+                    {service.features.map((f) => (
+                      <li
+                        key={f}
+                        className="flex items-center gap-2 text-sm text-muted-foreground"
+                      >
+                        <Check className="size-4 shrink-0 text-accent" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </motion.article>
             )
           })}

@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import {
   Share2,
   AtSign,
@@ -18,13 +20,15 @@ import { useLanguage } from '@/components/language-provider'
 export function Footer() {
   const { t } = useLanguage()
   const [subscribed, setSubscribed] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   const quickLinks = [
-    { label: t.nav.home, href: '#home' },
-    { label: t.nav.services, href: '#services' },
-    { label: t.nav.portfolio, href: '#portfolio' },
-    { label: t.nav.blog, href: '#blog' },
-    { label: t.nav.contact, href: '#contact' },
+    { label: t.nav.home, href: isHome ? '#home' : '/#home' },
+    { label: t.nav.services, href: isHome ? '#services' : '/#services' },
+    { label: t.nav.portfolio, href: isHome ? '#portfolio' : '/#portfolio' },
+    { label: t.nav.blog, href: isHome ? '#blog' : '/#blog' },
+    { label: t.nav.contact, href: isHome ? '#contact' : '/#contact' },
   ]
 
   const socials = [Share2, AtSign, Rss, Globe]
@@ -62,12 +66,12 @@ export function Footer() {
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-muted-foreground">
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     className="transition-colors hover:text-foreground"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -78,12 +82,12 @@ export function Footer() {
             <ul className="mt-4 flex flex-col gap-2.5 text-sm text-muted-foreground">
               {t.services.items.map((s) => (
                 <li key={s.title}>
-                  <a
-                    href="#services"
+                  <Link
+                    href={isHome ? '#services' : '/#services'}
                     className="transition-colors hover:text-foreground"
                   >
                     {s.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

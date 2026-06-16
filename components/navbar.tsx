@@ -1,5 +1,9 @@
 'use client'
 
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import Image from 'next/image'
+
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Globe } from 'lucide-react'
@@ -11,6 +15,8 @@ export function Navbar() {
   const { t, lang, toggleLang } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -20,13 +26,14 @@ export function Navbar() {
   }, [])
 
   const links = [
-    { label: t.nav.home, href: '#home' },
-    { label: t.nav.services, href: '#services' },
-    { label: t.nav.solutions, href: '#solutions' },
-    { label: t.nav.portfolio, href: '#portfolio' },
-    { label: t.nav.blog, href: '#blog' },
-    { label: t.nav.about, href: '#about' },
-    { label: t.nav.contact, href: '#contact' },
+    { label: t.nav.home, href: isHome ? '#home' : '/#home' },
+    { label: t.nav.services, href: isHome ? '#services' : '/#services' },
+    { label: t.nav.partners, href: isHome ? '#partners' : '/#partners' },
+    { label: t.nav.solutions, href: isHome ? '#solutions' : '/#solutions' },
+    { label: t.nav.portfolio, href: isHome ? '#portfolio' : '/#portfolio' },
+    { label: t.nav.blog, href: isHome ? '#blog' : '/#blog' },
+    { label: t.nav.about, href: isHome ? '#about' : '/#about' },
+    { label: t.nav.contact, href: isHome ? '#contact' : '/#contact' },
   ]
 
   return (
@@ -43,24 +50,25 @@ export function Navbar() {
             scrolled ? 'glass-strong shadow-lg shadow-black/20' : 'bg-transparent',
           )}
         >
-          <a href="#home" className="flex items-center gap-2.5">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          <Link href={isHome ? '#home' : '/#home'} className="flex items-center gap-2.5">
+            <Image
               src="/images/koinonos-logo.jpeg"
               alt="KOINONOS"
+              width={190}
+              height={40}
               className="h-10 w-auto max-w-[160px] rounded-xl bg-white object-contain px-2 py-1 shadow-sm shadow-black/20 sm:max-w-[190px]"
             />
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-1 lg:flex">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
                 className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -77,7 +85,7 @@ export function Navbar() {
               {lang.toUpperCase()}
             </button>
             <Button
-              render={<a href="#quote" />}
+              render={<Link href={isHome ? '#quote' : '/#quote'} />}
               className="hidden sm:inline-flex"
             >
               {t.nav.quote}
@@ -102,17 +110,17 @@ export function Navbar() {
               className="glass-strong mt-2 flex flex-col gap-1 rounded-2xl p-3 lg:hidden"
             >
               {links.map((l) => (
-                <a
+                <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
                   className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
               <Button
-                render={<a href="#quote" onClick={() => setOpen(false)} />}
+                render={<Link href={isHome ? '#quote' : '/#quote'} onClick={() => setOpen(false)} />}
                 className="mt-1 w-full"
               >
                 {t.nav.quote}

@@ -2,6 +2,7 @@ import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/sections/hero'
 import { Services } from '@/components/sections/services'
 import { Stats } from '@/components/sections/stats'
+import { Partners } from '@/components/sections/partners'
 import { WhyChoose } from '@/components/sections/why-choose'
 import { Portfolio } from '@/components/sections/portfolio'
 import { Industries } from '@/components/sections/industries'
@@ -22,6 +23,7 @@ export default function Page() {
         <Hero />
         <Services />
         <Stats />
+        <Partners />
         <WhyChoose />
         <Portfolio />
         <Industries />
