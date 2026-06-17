@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     locale: "fr_CD",
     siteName: "KOINONOS",
   },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

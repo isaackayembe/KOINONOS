@@ -2,11 +2,11 @@
 
 import { motion } from 'framer-motion'
 import {
-  Landmark,
-  Hotel,
-  Cross,
+  Users,
+  Handshake,
+  ShieldCheck,
   School,
-  Building2,
+  Globe2,
   Briefcase,
   type LucideIcon,
 } from 'lucide-react'
@@ -14,11 +14,11 @@ import { SectionHeading } from '@/components/section-heading'
 import { useLanguage } from '@/components/language-provider'
 
 const icons: LucideIcon[] = [
-  Landmark,
-  Hotel,
-  Cross,
+  Users,
+  Handshake,
+  ShieldCheck,
   School,
-  Building2,
+  Globe2,
   Briefcase,
 ]
 

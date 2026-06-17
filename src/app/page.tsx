@@ -1,7 +1,6 @@
 import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/sections/hero'
 import { Services } from '@/components/sections/services'
-import { Stats } from '@/components/sections/stats'
 import { Partners } from '@/components/sections/partners'
 import { WhyChoose } from '@/components/sections/why-choose'
 import { Portfolio } from '@/components/sections/portfolio'
@@ -13,7 +12,6 @@ import { Quote } from '@/components/sections/quote'
 import { Contact } from '@/components/sections/contact'
 import { Footer } from '@/components/sections/footer'
 import { AiAssistant } from '@/components/ai-assistant'
-import { WhatsappButton } from '@/components/whatsapp-button'
 
 export default function Page() {
   return (
@@ -22,7 +20,6 @@ export default function Page() {
       <main>
         <Hero />
         <Services />
-        <Stats />
         <Partners />
         <WhyChoose />
         <Portfolio />
@@ -35,7 +32,6 @@ export default function Page() {
       </main>
       <Footer />
       <AiAssistant />
-      <WhatsappButton />
     </div>
   )
 }

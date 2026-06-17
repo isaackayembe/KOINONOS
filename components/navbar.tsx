@@ -85,6 +85,7 @@ export function Navbar() {
               {lang.toUpperCase()}
             </button>
             <Button
+              nativeButton={false}
               render={<Link href={isHome ? '#quote' : '/#quote'} />}
               className="hidden sm:inline-flex"
             >
@@ -120,6 +121,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button
+                nativeButton={false}
                 render={<Link href={isHome ? '#quote' : '/#quote'} onClick={() => setOpen(false)} />}
                 className="mt-1 w-full"
               >

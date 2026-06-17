@@ -7,7 +7,6 @@ import { ArrowLeft, ArrowUpRight, Shield, Cpu, Code, GraduationCap } from 'lucid
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/sections/footer'
 import { AiAssistant } from '@/components/ai-assistant'
-import { WhatsappButton } from '@/components/whatsapp-button'
 import { useLanguage } from '@/components/language-provider'
 
 const categoryMeta: Record<
@@ -29,12 +28,12 @@ const categoryMeta: Record<
     glowClass: 'shadow-red-500/10 hover:shadow-red-500/20',
     gradientClass: 'from-red-500/10 via-transparent to-transparent',
     fr: {
-      title: 'Sécurité Électronique & Cybersécurité',
-      subtitle: 'Découvrez nos réalisations en protection physique intégrée et en cybersécurité proactive.',
+      title: 'Sécurité électronique',
+      subtitle: 'Solutions de protection physique et de cybersécurité pour vos infrastructures critiques.',
     },
     en: {
-      title: 'Electronic & Cyber Security',
-      subtitle: 'Explore our realizations in integrated physical protection and proactive cybersecurity.',
+      title: 'Electronic Security',
+      subtitle: 'Integrated physical and cyber security solutions for your critical infrastructures.',
     },
   },
   network: {
@@ -44,12 +43,12 @@ const categoryMeta: Record<
     glowClass: 'shadow-blue-500/10 hover:shadow-blue-500/20',
     gradientClass: 'from-blue-500/10 via-transparent to-transparent',
     fr: {
-      title: 'Infrastructures Réseau',
-      subtitle: 'Des architectures réseaux résilientes, rapides et conçues pour accompagner votre croissance.',
+      title: 'Audit sécurité et optimisation',
+      subtitle: 'Audit, optimisation et architecture réseau pour une performance sécurisée.',
     },
     en: {
-      title: 'Network Infrastructures',
-      subtitle: 'Resilient, fast network architectures designed to scale with your business growth.',
+      title: 'Security Audit & Optimization',
+      subtitle: 'Network audit, optimization, and architecture for secure performance.',
     },
   },
   dev: {
@@ -59,12 +58,12 @@ const categoryMeta: Record<
     glowClass: 'shadow-purple-500/10 hover:shadow-purple-500/20',
     gradientClass: 'from-purple-500/10 via-transparent to-transparent',
     fr: {
-      title: 'Développement Logiciel',
-      subtitle: 'Logiciels métier et applications mobiles sur mesure pour automatiser et digitaliser vos processus.',
+      title: 'Bureau d\'étude et conseil',
+      subtitle: 'Conseil et études pour vos projets informatiques et métiers.',
     },
     en: {
-      title: 'Software Development',
-      subtitle: 'Custom business software and mobile applications to automate and digitize your processes.',
+      title: 'Design Office & Consulting',
+      subtitle: 'Consulting and design office services for your business IT projects.',
     },
   },
   training: {
@@ -74,12 +73,12 @@ const categoryMeta: Record<
     glowClass: 'shadow-amber-500/10 hover:shadow-amber-500/20',
     gradientClass: 'from-amber-500/10 via-transparent to-transparent',
     fr: {
-      title: 'Formation IT & Gouvernance',
-      subtitle: 'Développez les compétences techniques de vos équipes aux meilleurs standards internationaux.',
+      title: 'Renforcement des capacités en TIC',
+      subtitle: 'Renforcement des compétences TIC de vos équipes selon les standards internationaux.',
     },
     en: {
-      title: 'IT Training & Governance',
-      subtitle: 'Develop your teams technical skills up to the highest international standards.',
+      title: 'ICT Capacity Building',
+      subtitle: 'Strengthening your team’s ICT skills to international standards.',
     },
   },
 }
@@ -201,7 +200,6 @@ export default function CategoryPage() {
 
       <Footer />
       <AiAssistant />
-      <WhatsappButton />
     </div>
   )
 }

@@ -126,11 +126,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="size-4 shrink-0 text-primary" />
-                +243 812 949 128
+                +243 817 490 524
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="size-4 shrink-0 text-primary" />
-                contactkoinonos@gmail.com
+                contact@groupkoinonos.com
               </li>
             </ul>
           </div>

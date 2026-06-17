@@ -29,18 +29,46 @@ export const translations = {
       items: [
         {
           title: 'Sécurité Électronique',
-          desc: 'Protection physique intégrée pour vos sites sensibles.',
-          features: ['Vidéosurveillance (CCTV)', 'Contrôle d\'accès', 'Systèmes biométriques', 'Alarmes incendie', 'Audit de sécurité'],
+          desc: 'Solutions complètes de sécurisation des sites avec vidéosurveillance, contrôle d\'accès et systèmes d\'alarme.',
+          features: [
+            'Vidéosurveillance IP',
+            'Contrôle d\'accès',
+            'Alarmes anti-intrusion',
+            'Alarmes incendie',
+            'Interphonie IP',
+            'Salles de monitoring',
+            'Video Wall',
+            'Détection périmétrique',
+            'Inspection de sécurité',
+            'Intégration de systèmes de sécurité',
+          ],
         },
         {
           title: 'Cybersécurité',
-          desc: 'Défense proactive contre les menaces numériques.',
-          features: ['Évaluation de sécurité', 'Analyse de vulnérabilités', 'Gestion des risques', 'Protection d\'infrastructure'],
+          desc: 'Audit et sécurisation des infrastructures IT pour une protection complète.',
+          features: [
+            'Audit des infrastructures IT',
+            'Audit de cybersécurité',
+            'Tests de vulnérabilité',
+            'Sécurisation des réseaux',
+            'Pare-feu et VPN',
+            'Supervision des systèmes',
+            'Optimisation des serveurs',
+            'Optimisation des performances réseau',
+            'Sauvegarde et reprise après sinistre',
+            'Infogérance et support technique',
+          ],
         },
         {
           title: 'Infrastructure Réseau',
-          desc: 'Des réseaux fiables, rapides et évolutifs.',
-          features: ['LAN / WAN', 'Solutions Wi-Fi', 'Administration serveurs', 'Intégration Cloud'],
+          desc: 'Dimensionnement et conception d\'infrastructures réseau sécurisées et évolutives.',
+          features: [
+            'Dimensionnement d\'infrastructures réseau',
+            'Conception de systèmes de sécurité électronique',
+            'Plans et schémas techniques',
+            'Assistance à maîtrise d\'ouvrage',
+            'Accompagnement de projets',
+          ],
         },
         {
           title: 'Développement Logiciel',
@@ -55,7 +83,17 @@ export const translations = {
         {
           title: 'Formation IT',
           desc: 'Montez en compétence vos équipes techniques.',
-          features: ['Réseaux', 'Cybersécurité', 'Administration système', 'Transformation digitale'],
+          features: [
+            'Administration réseaux',
+            'Cybersécurité',
+            'MikroTik',
+            'CCTV professionnel',
+            'Contrôle d\'accès',
+            'Sécurité électronique',
+            'Microsoft 365',
+            'Sensibilisation à la cybersécurité',
+            'Gestion des centres de supervision',
+          ],
         },
       ],
     },
@@ -90,102 +128,108 @@ export const translations = {
       tag: 'Portfolio',
       title: 'Des réalisations qui parlent',
       subtitle: 'Une sélection de projets livrés pour nos clients.',
-      filters: { all: 'Tous les projets', security: 'Sécurité', network: 'Réseaux', dev: 'Développement', training: 'Formation' },
+      filters: {
+        all: 'Tous les projets',
+        security: 'Sécurité électronique',
+        network: 'Audit sécurité et optimisation',
+        dev: 'Bureau d\'étude et conseil',
+        training: 'Renforcement des capacités en TIC',
+      },
       items: [
         {
           title: 'Vidéosurveillance bancaire',
           cat: 'security',
-          tag: 'Sécurité',
+          tag: 'Sécurité électronique',
           desc: "Déploiement d'un système de surveillance IP haute définition avec stockage redondant et analyse vidéo intelligente pour une grande banque commerciale."
         },
         {
           title: 'Datacenter & réseau hôtelier',
           cat: 'network',
-          tag: 'Réseaux',
+          tag: 'Audit sécurité et optimisation',
           desc: "Conception et implémentation de l'infrastructure réseau (Wi-Fi 6, commutation, routage) et d'une salle serveur sécurisée pour un hôtel 5 étoiles."
         },
         {
           title: 'Plateforme métier hospitalière',
           cat: 'dev',
-          tag: 'Développement',
+          tag: 'Bureau d\'étude et conseil',
           desc: "Logiciel de gestion des dossiers patients, de facturation et de planification des soins conçu sur mesure pour une clinique de référence."
         },
         {
           title: 'Contrôle d\'accès gouvernemental',
           cat: 'security',
-          tag: 'Sécurité',
+          tag: 'Sécurité électronique',
           desc: "Sécurisation des accès d'un bâtiment administratif via des systèmes biométriques de dernière génération et des portiques de sécurité connectés."
         },
         {
           title: 'Programme de formation cyber',
           cat: 'training',
-          tag: 'Formation',
+          tag: 'Renforcement des capacités en TIC',
           desc: "Formation intensive sur les principes de sécurité de l'information et sensibilisation au phishing pour plus de 300 employés de bureau."
         },
         {
           title: 'Application mobile entreprise',
           cat: 'dev',
-          tag: 'Développement',
+          tag: 'Bureau d\'étude et conseil',
           desc: "Application mobile Android/iOS connectée au système ERP pour la gestion de la flotte de livraison et le suivi logistique en temps réel."
         },
         {
           title: 'Système Anti-intrusion Industriel',
           cat: 'security',
-          tag: 'Sécurité',
+          tag: 'Sécurité électronique',
           desc: "Installation de barrières infrarouges, de capteurs sismiques et d'une alarme centralisée reliée à un centre de télésurveillance pour un site minier."
         },
         {
           title: 'Détection Incendie Connectée',
           cat: 'security',
-          tag: 'Sécurité',
+          tag: 'Sécurité électronique',
           desc: "Système de détection de fumée et de chaleur adressable de dernière génération conforme aux normes NFPA pour un grand entrepôt logistique."
         },
         {
           title: 'Interconnexion Multi-sites SD-WAN',
           cat: 'network',
-          tag: 'Réseaux',
+          tag: 'Audit sécurité et optimisation',
           desc: "Liaison sécurisée par tunnel SD-WAN hautement disponible reliant le siège social et 12 succursales à travers la République Démocratique du Congo."
         },
         {
           title: 'Réseau Sans-Fil Outdoor Métropolitain',
           cat: 'network',
-          tag: 'Réseaux',
+          tag: 'Audit sécurité et optimisation',
           desc: "Déploiement d'une boucle locale sans-fil à haut débit et de ponts radio point-à-point pour interconnecter des sites distants d'une entreprise publique."
         },
         {
           title: 'Audit & Optimisation Réseau',
           cat: 'network',
-          tag: 'Réseaux',
+          tag: 'Audit sécurité et optimisation',
           desc: "Analyse de performance, refonte du plan d'adressage IP, mise en place de la QoS et renforcement des politiques de sécurité pour un opérateur de services."
         },
         {
           title: 'Portail Client & Facturation Cloud',
           cat: 'dev',
-          tag: 'Développement',
+          tag: 'Bureau d\'étude et conseil',
           desc: "Application web hautement sécurisée permettant aux abonnés de consulter leurs factures, d'effectuer des paiements en ligne et d'ouvrir des tickets de support."
         },
         {
           title: 'Système de Gestion de Stocks (WMS)',
           cat: 'dev',
-          tag: 'Développement',
+          tag: 'Bureau d\'étude et conseil',
           desc: "Solution web d'automatisation des entrées/sorties de marchandises, avec suivi par code-barres et alertes intelligentes de réapprovisionnement."
         },
         {
           title: 'Certification Cisco CCNA & CCNP',
           cat: 'training',
-          tag: 'Formation',
+          tag: 'Renforcement des capacités en TIC',
           desc: "Atelier pratique intensif préparant les ingénieurs réseaux d'un partenaire télécom aux examens officiels d'administration réseau."
         },
         {
           title: 'Formation SecOps & DevOps',
           cat: 'training',
-          tag: 'Formation',
+          tag: 'Renforcement des capacités en TIC',
           desc: "Programme d'accompagnement sur le déploiement continu sécurisé, l'intégration des tests de sécurité (SAST/DAST) et Docker/Kubernetes."
         },
         {
           title: 'Gouvernance ITIL & Cybersécurité',
           cat: 'training',
-          tag: 'Formation',
+          tag: 'Renforcement des capacités en TIC',
           desc: "Session stratégique pour les décideurs et directeurs informatiques sur les cadres réglementaires, la gestion des risques et la norme ISO 27001."
         }
       ],
@@ -247,6 +291,8 @@ export const translations = {
       address: 'Adresse',
       phone: 'Téléphone',
       email: 'Email',
+      whatsapp: 'Nous écrire sur WhatsApp',
+      whatsappMessage: 'Contactez-nous directement sur WhatsApp pour une réponse rapide et pour discuter de votre projet en temps réel.',
     },
     footer: {
       about: 'Votre partenaire en Technologies de l\'Information et Sécurité Électronique à Kinshasa, RDC.',
@@ -270,8 +316,8 @@ export const translations = {
         training: 'Programmes de formation',
       },
       replies: {
-        quote: 'Avec plaisir ! Remplissez le formulaire de devis dans la section dédiée ou appelez le +243 812949128.',
-        support: 'Notre support est disponible 24/7. Écrivez à contactkoinonos@gmail.com ou appelez nos lignes directes.',
+        quote: 'Avec plaisir ! Remplissez le formulaire de devis dans la section dédiée ou appelez le +243 817 490 524.',
+        support: 'Notre support est disponible 24/7. Écrivez à contact@groupkoinonos.com ou appelez +243 817 490 524.',
         services: 'Nous couvrons la sécurité électronique, la cybersécurité, les réseaux, le développement logiciel, la maintenance et la formation.',
         training: 'Nos formations couvrent les réseaux, la cybersécurité, l\'administration système et la transformation digitale.',
         default: 'Merci pour votre message ! Un conseiller KOINONOS vous répondra. Vous pouvez aussi utiliser les actions rapides ci-dessous.',
@@ -367,102 +413,108 @@ export const translations = {
       tag: 'Portfolio',
       title: 'Work that speaks for itself',
       subtitle: 'A selection of projects delivered for our clients.',
-      filters: { all: 'All projects', security: 'Security', network: 'Networking', dev: 'Development', training: 'Training' },
+      filters: {
+        all: 'All projects',
+        security: 'Electronic Security',
+        network: 'Security Audit & Optimization',
+        dev: 'Design Office & Consulting',
+        training: 'ICT Capacity Building',
+      },
       items: [
         {
           title: 'Banking video surveillance',
           cat: 'security',
-          tag: 'Security',
+          tag: 'Electronic Security',
           desc: 'Deployment of a high-definition IP surveillance system with redundant storage and intelligent video analysis for a major commercial bank.'
         },
         {
           title: 'Hotel datacenter & network',
           cat: 'network',
-          tag: 'Networking',
+          tag: 'Security Audit & Optimization',
           desc: 'Design and implementation of network infrastructure (Wi-Fi 6, switching, routing) and a secure server room for a 5-star hotel.'
         },
         {
           title: 'Hospital business platform',
           cat: 'dev',
-          tag: 'Development',
+          tag: 'Design Office & Consulting',
           desc: 'Custom-designed patient file management, billing, and care scheduling software for a reference clinic.'
         },
         {
           title: 'Government access control',
           cat: 'security',
-          tag: 'Security',
+          tag: 'Electronic Security',
           desc: 'Securing access to an administrative building via state-of-the-art biometric systems and connected security gates.'
         },
         {
           title: 'Cybersecurity training program',
           cat: 'training',
-          tag: 'Training',
+          tag: 'ICT Capacity Building',
           desc: 'Intensive training on information security principles and phishing awareness for over 300 office employees.'
         },
         {
           title: 'Enterprise mobile application',
           cat: 'dev',
-          tag: 'Development',
+          tag: 'Design Office & Consulting',
           desc: 'Android/iOS mobile application connected to the ERP system for delivery fleet management and real-time logistics tracking.'
         },
         {
           title: 'Industrial Anti-intrusion System',
           cat: 'security',
-          tag: 'Security',
+          tag: 'Electronic Security',
           desc: 'Installation of infrared barriers, seismic sensors, and a centralized alarm connected to a remote monitoring center for a mining site.'
         },
         {
           title: 'Connected Fire Detection',
           cat: 'security',
-          tag: 'Security',
+          tag: 'Electronic Security',
           desc: 'Latest generation addressable smoke and heat detection system complying with NFPA standards for a large logistics warehouse.'
         },
         {
           title: 'Multi-site SD-WAN Interconnection',
           cat: 'network',
-          tag: 'Networking',
+          tag: 'Security Audit & Optimization',
           desc: 'Secure connection via highly available SD-WAN tunnel linking the headquarters and 12 branches across the Democratic Republic of Congo.'
         },
         {
           title: 'Metropolitan Outdoor Wireless Network',
           cat: 'network',
-          tag: 'Networking',
+          tag: 'Security Audit & Optimization',
           desc: 'Deployment of a high-speed wireless local loop and point-to-point radio bridges to interconnect remote sites of a public company.'
         },
         {
           title: 'Network Audit & Optimization',
           cat: 'network',
-          tag: 'Networking',
+          tag: 'Security Audit & Optimization',
           desc: 'Performance analysis, redesign of the IP addressing plan, implementation of QoS and reinforcement of security policies for a service provider.'
         },
         {
           title: 'Client Portal & Cloud Billing',
           cat: 'dev',
-          tag: 'Development',
+          tag: 'Design Office & Consulting',
           desc: 'Highly secure web application allowing subscribers to view invoices, make online payments, and open support tickets.'
         },
         {
           title: 'Warehouse Management System (WMS)',
           cat: 'dev',
-          tag: 'Development',
+          tag: 'Design Office & Consulting',
           desc: 'Web solution for automating goods receipt/issue, with barcode tracking and intelligent replenishment alerts.'
         },
         {
           title: 'Cisco CCNA & CCNP Certification',
           cat: 'training',
-          tag: 'Training',
+          tag: 'ICT Capacity Building',
           desc: 'Intensive hands-on workshop preparing network engineers from a telecom partner for official network administration exams.'
         },
         {
           title: 'SecOps & DevOps Training',
           cat: 'training',
-          tag: 'Training',
+          tag: 'ICT Capacity Building',
           desc: 'Mentoring program on secure continuous deployment, security test integration (SAST/DAST) and Docker/Kubernetes.'
         },
         {
           title: 'ITIL Governance & Cybersecurity',
           cat: 'training',
-          tag: 'Training',
+          tag: 'ICT Capacity Building',
           desc: 'Strategic session for IT decision-makers and directors on regulatory frameworks, risk management and the ISO 27001 standard.'
         }
       ],
@@ -524,6 +576,8 @@ export const translations = {
       address: 'Address',
       phone: 'Phone',
       email: 'Email',
+      whatsapp: 'Message us on WhatsApp',
+      whatsappMessage: 'Contact us directly on WhatsApp for a fast response and discuss your project in real time.',
     },
     footer: {
       about: 'Your partner in Information Technology and Electronic Security in Kinshasa, DRC.',
@@ -547,8 +601,8 @@ export const translations = {
         training: 'Training programs',
       },
       replies: {
-        quote: 'Happy to help! Fill out the quote form in the dedicated section or call +243 812949128.',
-        support: 'Our support is available 24/7. Email contactkoinonos@gmail.com or call our direct lines.',
+        quote: 'Happy to help! Fill out the quote form in the dedicated section or call +243 817 490 524.',
+        support: 'Our support is available 24/7. Email contact@groupkoinonos.com or call +243 817 490 524.',
         services: 'We cover electronic security, cybersecurity, networking, software development, maintenance and training.',
         training: 'Our training covers networking, cybersecurity, system administration and digital transformation.',
         default: 'Thanks for your message! A KOINONOS advisor will reply. You can also use the quick actions below.',

@@ -24,6 +24,21 @@ const icons: LucideIcon[] = [
   GraduationCap,
 ]
 
+const serviceImages: Record<string, string> = {
+  'Sécurité Électronique': '/images/camera.jpg',
+  'Electronic Security': '/images/camera.jpg',
+  'Cybersécurité': '/images/securite.png',
+  'Cybersecurity': '/images/securite.png',
+  'Infrastructure Réseau': '/images/infrastructure reseau.jpg',
+  'Network Infrastructure': '/images/infrastructure reseau.jpg',
+  'Développement Logiciel': '/images/4. BUREAU D\'ETUDE ET CONSEIL/12468.jpg',
+  'Software Development': '/images/4. BUREAU D\'ETUDE ET CONSEIL/12468.jpg',
+  'Maintenance Informatique': '/images/maintance infirmatique.jpg',
+  'IT Maintenance': '/images/maintance infirmatique.jpg',
+  'Formation IT': '/images/3. RENFORCEMENT DES CAPACITES EN TIC/cap1.jpg',
+  'IT Training': '/images/3. RENFORCEMENT DES CAPACITES EN TIC/cap1.jpg',
+}
+
 export function Services() {
   const { t } = useLanguage()
 
@@ -64,9 +79,18 @@ export function Services() {
                   <div className="absolute inset-0 bg-black/40" />
 
                   {/* Icon wrapper with glowing external shadow */}
-                  <div
-                    className="relative flex size-14 items-center justify-center rounded-2xl border border-white/10 bg-black/60 text-white shadow-[0_0_15px_rgba(255,255,255,0.12)] transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40 group-hover:text-primary group-hover:shadow-[0_0_20px_rgba(227,6,19,0.5)]"
-                  >
+                  <div className="absolute inset-0">
+                    <Image
+                      src={serviceImages[service.title] || '/images/cisco.png'}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover blur-[2px] scale-110 opacity-70 transition-transform duration-500 group-hover:scale-115"
+                    />
+                    <div className="absolute inset-0 bg-black/40" />
+                  </div>
+
+                  <div className="relative flex size-14 items-center justify-center rounded-2xl border border-white/10 bg-black/60 text-white shadow-[0_0_15px_rgba(255,255,255,0.12)] transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40 group-hover:text-primary group-hover:shadow-[0_0_20px_rgba(227,6,19,0.5)]">
                     <Icon className="size-7" />
                   </div>
                 </div>

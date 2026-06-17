@@ -2,23 +2,39 @@
 
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ArrowRight, ShieldCheck } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useLanguage } from '@/components/language-provider'
 
-const welcomeLines = ['Bienvenue sur KOINONOS', 'Welcome to KOINONOS']
+function CountUp({ value, suffix }: { value: number; suffix: string }) {
+  const [display, setDisplay] = useState(0)
+
+  useEffect(() => {
+    let raf = 0
+    const duration = 1200
+    const start = performance.now()
+
+    const animate = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      setDisplay(Math.round(eased * value))
+      if (progress < 1) raf = requestAnimationFrame(animate)
+    }
+
+    raf = requestAnimationFrame(animate)
+    return () => cancelAnimationFrame(raf)
+  }, [value])
+
+  return (
+    <span className="tabular-nums">
+      {display}
+      {suffix}
+    </span>
+  )
+}
 
 export function Hero() {
   const { t } = useLanguage()
-  const [welcomeIndex, setWelcomeIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setWelcomeIndex((index) => (index + 1) % welcomeLines.length)
-    }, 2800)
-
-    return () => window.clearInterval(interval)
-  }, [])
 
   return (
     <section
@@ -44,23 +60,6 @@ export function Hero() {
       <div className="absolute right-1/4 top-1/2 -z-10 size-[360px] rounded-full bg-accent/20 blur-[120px]" />
 
       <div className="mx-auto max-w-4xl px-4 text-center">
-        <div
-          className="mb-5 flex min-h-9 items-center justify-center overflow-hidden"
-          aria-live="polite"
-        >
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={welcomeLines[welcomeIndex]}
-              initial={{ opacity: 0, y: 16, filter: 'blur(6px)' }}
-              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, y: -16, filter: 'blur(6px)' }}
-              transition={{ duration: 0.45, ease: 'easeOut' }}
-              className="rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-semibold uppercase text-primary shadow-lg shadow-primary/10 sm:text-base"
-            >
-              {welcomeLines[welcomeIndex]}
-            </motion.p>
-          </AnimatePresence>
-        </div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -87,6 +86,7 @@ export function Hero() {
           className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
           <Button
+            nativeButton={false}
             render={<a href="#quote" />}
             size="lg"
             className="group glow-primary h-12 px-7 text-base"
@@ -95,6 +95,7 @@ export function Hero() {
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button
+            nativeButton={false}
             render={<a href="#services" />}
             size="lg"
             variant="outline"
@@ -105,26 +106,27 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mx-auto mt-12 flex max-w-md items-center justify-center gap-8 text-sm text-muted-foreground"
+          className="mx-auto mt-12 grid max-w-4xl gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
         >
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="size-4 text-accent" />
-            <span>
-              <span className="font-bold text-foreground">99.9%</span>{' '}
-              {t.hero.stat1}
-            </span>
-          </div>
-          <div className="h-8 w-px bg-border" />
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="size-4 text-primary" />
-            <span>
-              <span className="font-bold text-foreground">ISO</span>{' '}
-              {t.hero.stat2}
-            </span>
-          </div>
+          {t.stats.items.map((stat, i) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.25 + i * 0.08 }}
+              className="flex flex-col justify-center rounded-3xl border border-border p-6 text-center backdrop-blur-sm"
+            >
+              <p className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+                <CountUp value={stat.value} suffix={stat.suffix} />
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {stat.label}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

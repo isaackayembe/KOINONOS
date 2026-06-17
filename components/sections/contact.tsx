@@ -21,12 +21,12 @@ export function Contact() {
     {
       icon: Phone,
       title: t.contact.phone,
-      lines: ['+243 812 949 128', '+243 817 490 524'],
+      lines: ['+243 817 490 524', 'WhatsApp: +243 812 949 128'],
     },
     {
       icon: Mail,
       title: t.contact.email,
-      lines: ['contactkoinonos@gmail.com'],
+      lines: ['contact@groupkoinonos.com'],
     },
   ]
 
@@ -52,7 +52,20 @@ export function Contact() {
                     <h3 className="font-semibold">{card.title}</h3>
                     <div className="mt-2 flex flex-col gap-1 text-sm leading-relaxed text-muted-foreground">
                       {card.lines.map((line) => (
-                        <span key={line}>{line}</span>
+                        <span key={line}>
+                          {line.startsWith('WhatsApp:') ? (
+                            <a
+                              href="https://wa.me/243812949128"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary underline transition hover:text-primary/80"
+                            >
+                              {line}
+                            </a>
+                          ) : (
+                            line
+                          )}
+                        </span>
                       ))}
                     </div>
                   </div>
