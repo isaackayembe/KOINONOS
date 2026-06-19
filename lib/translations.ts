@@ -101,8 +101,8 @@ export const translations = {
       items: [
         { value: 100, suffix: '+', label: 'Projets réalisés' },
         { value: 50, suffix: '+', label: 'Clients satisfaits' },
-        { value: 24, suffix: '/7', label: 'Support disponible' },
-        { value: 4, suffix: '+', label: 'Années d\'expérience' },
+        { value: 24, suffix: '/6', label: 'Support disponible' },
+        { value: 5, suffix: '+', label: 'Années d\'expérience' },
       ],
     },
     partners: {
@@ -137,7 +137,7 @@ export const translations = {
       },
       items: [
         {
-          title: 'Vidéosurveillance bancaire',
+          title: 'Vidéosurveillance',
           cat: 'security',
           tag: 'Sécurité électronique',
           desc: "Déploiement d'un système de surveillance IP haute définition avec stockage redondant et analyse vidéo intelligente pour une grande banque commerciale."
@@ -265,7 +265,7 @@ export const translations = {
       title: 'Questions fréquentes',
       items: [
         { q: 'Quels secteurs accompagnez-vous ?', a: 'Banques, hôtellerie, santé, éducation, institutions gouvernementales et entreprises de toutes tailles.' },
-        { q: 'Proposez-vous un support 24/7 ?', a: 'Oui, nos équipes assurent une assistance continue avec des temps de réponse garantis.' },
+        { q: 'Proposez-vous un support 24/6 ?', a: 'Oui, nos équipes assurent une assistance continue avec des temps de réponse garantis.' },
         { q: 'Comment se déroule un projet ?', a: 'Audit, recommandation, déploiement et accompagnement : chaque étape est cadrée et suivie.' },
         { q: 'Intervenez-vous en dehors de Kinshasa ?', a: 'Oui, nous intervenons sur l\'ensemble du territoire et à l\'international selon les besoins.' },
       ],
@@ -317,7 +317,7 @@ export const translations = {
       },
       replies: {
         quote: 'Avec plaisir ! Remplissez le formulaire de devis dans la section dédiée ou appelez le +243 817 490 524.',
-        support: 'Notre support est disponible 24/7. Écrivez à contact@groupkoinonos.com ou appelez +243 817 490 524.',
+        support: 'Notre support est disponible 24/6. Écrivez à contact@groupkoinonos.com ou appelez +243 817 490 524.',
         services: 'Nous couvrons la sécurité électronique, la cybersécurité, les réseaux, le développement logiciel, la maintenance et la formation.',
         training: 'Nos formations couvrent les réseaux, la cybersécurité, l\'administration système et la transformation digitale.',
         default: 'Merci pour votre message ! Un conseiller KOINONOS vous répondra. Vous pouvez aussi utiliser les actions rapides ci-dessous.',
@@ -386,8 +386,8 @@ export const translations = {
       items: [
         { value: 100, suffix: '+', label: 'Projects delivered' },
         { value: 50, suffix: '+', label: 'Happy clients' },
-        { value: 24, suffix: '/7', label: 'Support available' },
-        { value: 4, suffix: '+', label: 'Years of experience' },
+        { value: 24, suffix: '/6', label: 'Support available' },
+        { value: 5, suffix: '+', label: 'Years of experience' },
       ],
     },
     partners: {
@@ -550,7 +550,7 @@ export const translations = {
       title: 'Frequently asked questions',
       items: [
         { q: 'Which industries do you serve?', a: 'Banking, hospitality, healthcare, education, government institutions and enterprises of all sizes.' },
-        { q: 'Do you offer 24/7 support?', a: 'Yes, our teams provide continuous assistance with guaranteed response times.' },
+        { q: 'Do you offer 24/6 support?', a: 'Yes, our teams provide continuous assistance with guaranteed response times.' },
         { q: 'How does a project unfold?', a: 'Audit, recommendation, deployment and support: every stage is scoped and tracked.' },
         { q: 'Do you operate outside Kinshasa?', a: 'Yes, we operate nationwide and internationally as needed.' },
       ],
@@ -602,7 +602,7 @@ export const translations = {
       },
       replies: {
         quote: 'Happy to help! Fill out the quote form in the dedicated section or call +243 817 490 524.',
-        support: 'Our support is available 24/7. Email contact@groupkoinonos.com or call +243 817 490 524.',
+        support: 'Our support is available 24/6. Email contact@groupkoinonos.com or call +243 817 490 524.',
         services: 'We cover electronic security, cybersecurity, networking, software development, maintenance and training.',
         training: 'Our training covers networking, cybersecurity, system administration and digital transformation.',
         default: 'Thanks for your message! A KOINONOS advisor will reply. You can also use the quick actions below.',

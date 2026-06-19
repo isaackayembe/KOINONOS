@@ -27,7 +27,6 @@ export function Footer() {
     { label: t.nav.home, href: isHome ? '#home' : '/#home' },
     { label: t.nav.services, href: isHome ? '#services' : '/#services' },
     { label: t.nav.portfolio, href: isHome ? '#portfolio' : '/#portfolio' },
-    { label: t.nav.blog, href: isHome ? '#blog' : '/#blog' },
     { label: t.nav.contact, href: isHome ? '#contact' : '/#contact' },
   ]
 

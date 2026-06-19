@@ -21,7 +21,7 @@ export function Contact() {
     {
       icon: Phone,
       title: t.contact.phone,
-      lines: ['+243 817 490 524', 'WhatsApp: +243 812 949 128'],
+      lines: ['+243 817 490 524', 'WhatsApp: +243 817 490 524'],
     },
     {
       icon: Mail,
@@ -55,7 +55,7 @@ export function Contact() {
                         <span key={line}>
                           {line.startsWith('WhatsApp:') ? (
                             <a
-                              href="https://wa.me/243812949128"
+                              href="https://wa.me/243817490524"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-primary underline transition hover:text-primary/80"

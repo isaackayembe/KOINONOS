@@ -3,12 +3,28 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { SectionHeading } from '@/components/section-heading'
 import { useLanguage } from '@/components/language-provider'
 import { cn } from '@/lib/utils'
 
-const images: Record<string, string> = {
+const titleImages: Record<string, string> = {
+  "Vidéosurveillance": '/images/portofolio/portfolio-videosurveillance.jpg',
+  "Contrôle d'acces": '/images/portofolio/portfolio-videosurveillance.jpg',
+  "Système Anti-intrusion Industriel": '/images/portofolio/portfolio-videosurveillance.jpg',
+  "Détection Incendie Connectée": '/images/portofolio/portfolio-videosurveillance.jpg',
+  "Datacenter & réseau hôtelier": '/images/portofolio/portfolio-datacenter-reseau.jpg',
+  "Interconnexion Multi-sites SD-WAN": '/images/portofolio/portfolio-datacenter-reseau.jpg',
+  "Réseau Sans-Fil Outdoor Métropolitain": '/images/portofolio/portfolio-datacenter-reseau.jpg',
+  "Audit & Optimisation Réseau": '/images/portofolio/portfolio-audit-securite.jpg',
+  "Programme de formation cyber": '/images/portofolio/portfolio-renforcement-capacite.jpg',
+  "Cisco CCNA & CCNP Certification": '/images/portofolio/portfolio-renforcement-capacite.jpg',
+  "Formation SecOps & DevOps": '/images/portofolio/portfolio-renforcement-capacite.jpg',
+  "Gouvernance ITIL & Cybersécurité": '/images/portofolio/portfolio-renforcement-capacite.jpg',
+}
+
+const categoryImages: Record<string, string> = {
   security: '/images/portfolio-security.svg',
   network: '/images/portfolio-network.svg',
   dev: '/images/portfolio-dev.svg',
@@ -94,11 +110,12 @@ export function Portfolio() {
                   className="group relative overflow-hidden rounded-2xl border border-border cursor-pointer"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={images[item.cat] || '/placeholder.svg'}
+                    <Image
+                      src={titleImages[item.title] || categoryImages[item.cat] || '/placeholder.svg'}
                       alt={item.title}
-                      className="size-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />

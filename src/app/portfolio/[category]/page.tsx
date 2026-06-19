@@ -23,7 +23,7 @@ const categoryMeta: Record<
 > = {
   security: {
     icon: Shield,
-    image: '/images/portfolio-security.svg',
+    image: '/images/portofolio/portfolio-videosurveillance.jpg',
     colorClass: 'text-red-500 border-red-500/20 hover:border-red-500/50 focus-visible:ring-red-500/50',
     glowClass: 'shadow-red-500/10 hover:shadow-red-500/20',
     gradientClass: 'from-red-500/10 via-transparent to-transparent',
@@ -38,7 +38,7 @@ const categoryMeta: Record<
   },
   network: {
     icon: Cpu,
-    image: '/images/portfolio-network.svg',
+    image: '/images/portofolio/portfolio-datacenter-reseau.jpg',
     colorClass: 'text-blue-500 border-blue-500/20 hover:border-blue-500/50 focus-visible:ring-blue-500/50',
     glowClass: 'shadow-blue-500/10 hover:shadow-blue-500/20',
     gradientClass: 'from-blue-500/10 via-transparent to-transparent',
@@ -53,7 +53,7 @@ const categoryMeta: Record<
   },
   dev: {
     icon: Code,
-    image: '/images/portfolio-dev.svg',
+    image: '/images/portofolio/portfolio-audit-securite.jpg',
     colorClass: 'text-purple-500 border-purple-500/20 hover:border-purple-500/50 focus-visible:ring-purple-500/50',
     glowClass: 'shadow-purple-500/10 hover:shadow-purple-500/20',
     gradientClass: 'from-purple-500/10 via-transparent to-transparent',
@@ -68,7 +68,7 @@ const categoryMeta: Record<
   },
   training: {
     icon: GraduationCap,
-    image: '/images/portfolio-training.svg',
+    image: '/images/portofolio/portfolio-renforcement-capacite.jpg',
     colorClass: 'text-amber-500 border-amber-500/20 hover:border-amber-500/50 focus-visible:ring-amber-500/50',
     glowClass: 'shadow-amber-500/10 hover:shadow-amber-500/20',
     gradientClass: 'from-amber-500/10 via-transparent to-transparent',

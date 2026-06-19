@@ -31,7 +31,6 @@ export function Navbar() {
     { label: t.nav.partners, href: isHome ? '#partners' : '/#partners' },
     { label: t.nav.solutions, href: isHome ? '#solutions' : '/#solutions' },
     { label: t.nav.portfolio, href: isHome ? '#portfolio' : '/#portfolio' },
-    { label: t.nav.blog, href: isHome ? '#blog' : '/#blog' },
     { label: t.nav.about, href: isHome ? '#about' : '/#about' },
     { label: t.nav.contact, href: isHome ? '#contact' : '/#contact' },
   ]

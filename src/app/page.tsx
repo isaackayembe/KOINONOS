@@ -6,7 +6,6 @@ import { WhyChoose } from '@/components/sections/why-choose'
 import { Portfolio } from '@/components/sections/portfolio'
 import { Industries } from '@/components/sections/industries'
 import { Testimonials } from '@/components/sections/testimonials'
-import { Blog } from '@/components/sections/blog'
 import { Faq } from '@/components/sections/faq'
 import { Quote } from '@/components/sections/quote'
 import { Contact } from '@/components/sections/contact'
@@ -25,7 +24,6 @@ export default function Page() {
         <Portfolio />
         <Industries />
         <Testimonials />
-        <Blog />
         <Faq />
         <Quote />
         <Contact />
