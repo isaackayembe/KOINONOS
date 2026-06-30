@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { LanguageProvider } from "@/components/language-provider";
 import "./globals.css";
+import IOSDetect from '@/components/ios-detect'
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -51,6 +52,7 @@ export default function RootLayout({
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full">
+        <IOSDetect />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
