@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     siteName: "KOINONOS",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/images/koinonos-logo.jpeg",
+    shortcut: "/images/koinonos-logo.jpeg",
+    apple: "/images/koinonos-logo.jpeg",
   },
 };
 

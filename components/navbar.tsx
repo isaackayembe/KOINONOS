@@ -53,9 +53,10 @@ export function Navbar() {
             <Image
               src="/images/koinonos-logo.jpeg"
               alt="KOINONOS"
-              width={190}
-              height={40}
-              className="h-10 w-auto max-w-[160px] rounded-xl bg-white object-contain px-2 py-1 shadow-sm shadow-black/20 sm:max-w-[190px]"
+              width={140}
+              height={50}
+              priority
+              className="h-10 w-auto max-w-[120px] rounded-xl bg-white object-contain px-2 py-1 shadow-sm shadow-black/20 sm:max-w-[140px]"
             />
           </Link>
 

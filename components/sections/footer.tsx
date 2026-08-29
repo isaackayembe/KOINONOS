@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import {
   Share2,
@@ -37,11 +38,12 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-10 pb-12 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/images/koinonos-logo.jpeg"
               alt="KOINONOS"
-              className="h-12 w-auto max-w-[220px] rounded-xl bg-white object-contain px-2 py-1 shadow-sm shadow-black/20"
+              width={140}
+              height={50}
+              className="h-12 w-auto max-w-[140px] rounded-xl bg-white object-contain px-2 py-1 shadow-sm shadow-black/20"
             />
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {t.footer.about}

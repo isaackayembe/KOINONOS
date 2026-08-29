@@ -109,9 +109,9 @@ export function Portfolio() {
                   transition={{ duration: 0.4 }}
                   className="group relative overflow-hidden rounded-2xl border border-border cursor-pointer"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
-                      src={titleImages[item.title] || categoryImages[item.cat] || '/placeholder.svg'}
+                      src={titleImages[item.title] || categoryImages[item.cat] || '/images/portofolio/portfolio-datacenter-reseau.jpg'}
                       alt={item.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
